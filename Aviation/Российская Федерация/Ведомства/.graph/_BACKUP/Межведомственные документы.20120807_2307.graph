@@ -1,0 +1,53 @@
+digraph МежведомственныеДокументы {
+
+	title [shape=none, label="Ведомства РФ,\nрегламентирующие ОрВД в РФ"];
+
+	node [shape = box];
+
+	1 [label="Министерство обороны РФ"];
+	3 [label="Министерство здравоохранения и социального развития РФ"];
+	5 [label="МГА"];
+
+	title -> 1 [style=invis];
+	title -> title2 [style=invis];
+	title -> 3 [style=invis];
+	title -> title4 [style=invis];
+	title -> 5 [style=invis];
+
+	subgraph cluster_МинистерствоТранспорта {
+
+		title2 [shape=none, label="Министерство транспорта РФ"];
+
+		title2 -> title21 [style=invis];
+
+		subgraph cluster_21 {
+
+			title21 [shape=none, label="Федеральные органы исполнительной власти Министерства"];
+		
+			211 [label="Федеральное агентство воздушного транспрта (Росавиация)"];
+			212 [label="ФСВТ"];
+			213 [label="ФАС России"];
+
+			title21 -> 211 [style=invis];
+			title21 -> 212 [style=invis];
+			title21 -> 213 [style=invis];
+		}
+	}
+
+	subgraph cluster_МинистерствоПриродныхРесурсовЭкологии {
+
+		title4 [shape=none, label="Министерство природных ресурсов и экологии РФ"];
+
+		title4 -> title41 [style=invis];
+
+		subgraph cluster_41 {
+
+			title41 [shape=none, label="Федеральные органы исполнительной власти Министерства"];
+		
+			411 [label="Федеральная службы России по гидрометеорологии и мониторингу окружающей среды (Росгидромет)"];
+
+			title41 -> 411 [style=invis];
+		}
+	}
+
+}

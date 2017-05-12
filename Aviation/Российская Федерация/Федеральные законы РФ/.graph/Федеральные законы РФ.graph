@@ -1,0 +1,14 @@
+digraph ФедеральныеЗаконы {
+
+	title [shape=none, label="Федеральные законы РФ,\nрегламентирующие ОрВД в РФ"];
+
+	shape=box;
+	color=lightgray;
+	style=filled;
+	node [shape=Mrecord,fillcolor=yellow,fontcolor=red,style=filled];
+
+	ВК [label="{Воздушный кодекс Российской Федерации|Принят Государственной Думой 19 февраля 1997 г.\nОдобрен Советом Федерации 5 марта 1997 г.\nПодписан Президентом РФ 19 марта 1997 г.\n№ 60-ФЗ|изменения от 14 июня 2012 г.}"];
+
+	title -> ВК [style=invis];
+
+} 
