@@ -1,5 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file alias = "motion.mng">motion.mng</file>
-    </qresource>
-</RCC>
